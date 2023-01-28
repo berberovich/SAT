@@ -3,21 +3,26 @@ import { Link, NavLink } from "react-router-dom";
 import "./Navbar.scss";
 function Navbar() {
   const [dataVisible, setDataVisible] = useState(false);
+  const [ariaExpanded, setAriaExpanded] = useState(false);
+  const handleNavBtnClick = (e) => {
+    setAriaExpanded(!ariaExpanded);
+  };
   return (
-    <header className="header ">
+    <header className="header flex justify-between items-center">
       <div className="brand-name container">
         <Link to="">SAT MATH</Link>
       </div>
       <button
-        aria-expanded="false"
+        aria-expanded={ariaExpanded}
         className="navbar-toggle flex justify-center items-center"
+        onClick={handleNavBtnClick}
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav className="container" data-visible="true">
-        <ul className="navbar">
+      <nav className="container" data-visible={dataVisible}>
+        <ul className="navbar flex">
           <li className="nav-item">
             <NavLink to="" className="nav-link">
               Home
