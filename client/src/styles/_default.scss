@@ -39,7 +39,7 @@ ul li {
   background-color: $background-color;
 }
 
-.container {
+#root {
   max-width: $container-width + px;
   margin: 0 auto;
   padding: $container-padding;
