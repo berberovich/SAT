@@ -1,17 +1,41 @@
 .about {
-  line-height: 2;
   gap: 20px;
   padding-top: 100px;
+  text-align: justify;
+
+  &__content > p {
+    padding-bottom: 29px;
+    line-height: 2;
+  }
+  &__image {
+    img {
+      width: 450px;
+    }
+  }
+
+  &__content {
+    ul {
+      li {
+        padding: 14px 0;
+        b {
+          display: inline-block;
+          padding-bottom: 4px;
+        }
+        div {
+          gap: 4px;
+        }
+      }
+    }
+  }
+
   p {
     max-width: 500px;
-    padding-top: 49px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .about {
     flex-direction: column-reverse;
-    text-align: justify;
     max-width: 500px;
     margin: 0 auto;
     p {
@@ -25,8 +49,4 @@
       }
     }
   }
-}
-
-img {
-  width: 400px;
 }

@@ -8,6 +8,11 @@
 
 .nav-link {
   color: rgb(182, 174, 174);
+  transition: 0.4s;
+}
+
+.nav-link:hover {
+  color: black;
 }
 .active {
   color: black;

@@ -6,6 +6,10 @@
         "About me": "About me"
     },
     "about": {
-        "paragraphAboutMe": "My name is Garo, I have 4+ years of teaching experience. I’ve worked with a lot of students from different score backgrounds, and helped most of them raise their SAT Math score. With a success rate of 89% given that they put in the work"
+        "paragraphAboutMe": "My name is Garo, I have 4+ years of teaching experience. I’ve worked with a lot of students from different score backgrounds, and helped most of them raise their SAT Math score, with a success rate of 89% given that they put in the work",
+        "birthPlace": "born in Aleppo, Syria",
+        "resettle": "left Aleppo and moved to Armenia",
+        "graduation": "bachelor's degree in computer science at AUA",
+        "profession": "SAT math Tutor"
     }
 }
