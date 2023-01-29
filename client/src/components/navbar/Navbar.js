@@ -6,11 +6,14 @@ import Select from "@mui/material/Select";
 import i18next from "i18next";
 import "./Navbar.scss";
 import { useTranslation } from "react-i18next";
+import cookies from "js-cookie";
+
 function Navbar() {
   const { t } = useTranslation();
   const [dataVisible, setDataVisible] = useState(false);
   const [ariaExpanded, setAriaExpanded] = useState(false);
   const [language, setLanguage] = useState("en");
+  const currentLanguage = cookies.get("i18next");
   const handleNavBtnClick = (e) => {
     setAriaExpanded(!ariaExpanded);
     setDataVisible(!dataVisible);
@@ -18,6 +21,8 @@ function Navbar() {
   const handleLanguageChange = ({ target }) => {
     const { value } = target;
     setLanguage(value);
+    console.log(window.location.pathname);
+
     i18next.changeLanguage(value);
   };
   return (
@@ -38,22 +43,22 @@ function Navbar() {
         <ul className="navbar flex" data-visible={dataVisible}>
           <li className="nav-item">
             <NavLink to="" className="nav-link">
-              {t("Home")}
+              {t("navbar.Home")}
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="courses" className="nav-link">
-              {t("Courses")}
+              {t("navbar.Courses")}
             </NavLink>
           </li>{" "}
           <li className="nav-item">
             <NavLink to="about" className="nav-link">
-              {t("About me")}
+              {t("navbar.About me")}
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="contact" className="nav-link">
-              {t("Contact")}
+              {t("navbar.Contact")}
             </NavLink>
           </li>
         </ul>
@@ -66,8 +71,12 @@ function Navbar() {
               defaultValue={language}
               onChange={handleLanguageChange}
             >
-              <MenuItem value={"en"}>en</MenuItem>
-              <MenuItem value={"am"}>հայ</MenuItem>
+              <MenuItem value={"en"} disabled={currentLanguage === "en"}>
+                en
+              </MenuItem>
+              <MenuItem value={"am"} disabled={currentLanguage === "am"}>
+                հայ
+              </MenuItem>
             </Select>
           </FormControl>
         </div>

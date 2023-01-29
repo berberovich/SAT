@@ -1,0 +1,11 @@
+{
+    "navbar": {
+       "Home": "Home",
+        "Courses": "Courses",
+        "Contact": "Contact",
+        "About me": "About me"
+    },
+    "about": {
+        "paragraphAboutMe": "My name is Garo, I have 4+ years of teaching experience. I’ve worked with a lot of students from different score backgrounds, and helped most of them raise their SAT Math score. With a success rate of 89% given that they put in the work"
+    }
+}

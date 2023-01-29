@@ -1,0 +1,32 @@
+.about {
+  line-height: 2;
+  gap: 20px;
+  padding-top: 100px;
+  p {
+    max-width: 500px;
+    padding-top: 49px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column-reverse;
+    text-align: justify;
+    max-width: 500px;
+    margin: 0 auto;
+    p {
+      padding-top: 0px;
+    }
+    &__image {
+      text-align: center;
+      order: 1;
+      img {
+        width: 300px;
+      }
+    }
+  }
+}
+
+img {
+  width: 400px;
+}

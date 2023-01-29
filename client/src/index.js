@@ -4,7 +4,7 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import "../src/styles/main.scss";
 import { CircularProgress } from "@mui/material";
-import "../src/services/lagnuageSwticher.js";
+import "../src/i18n.js";
 const root = createRoot(document.getElementById("root"));
 root.render(
   <Suspense fallback={<CircularProgress />}>
