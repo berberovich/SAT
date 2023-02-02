@@ -12,7 +12,7 @@ function ErrorPage() {
       <h1>PAGE NOT FOUND</h1>
       <p>Sorry, the page you're looking for doesn't exist. </p>
       <Button variant="contained" size="large" onClick={handleBtnClick}>
-        HOME
+        GO HOME
       </Button>
     </div>
   );

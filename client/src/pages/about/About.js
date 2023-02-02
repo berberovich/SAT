@@ -16,12 +16,19 @@ function About() {
       <div className="about__content">
         <p>{t("about.paragraphAboutMe")}</p>
         <ul>
+          {" "}
           <li>
-            <b>1995</b>
+            <b>2019-present</b>
             <div className="flex items-center">
-              <img src={babyBoy} alt="" />
-              <p>{t("about.birthPlace")}</p>
-              <img src={syria} alt="" />
+              <img src={maleTeacher} alt="" />
+              <p>{t("about.profession")}</p>
+            </div>
+          </li>{" "}
+          <li>
+            <b>2015-2019</b>{" "}
+            <div className="flex items-center">
+              <img src={graduationHat} alt="" />
+              <p>{t("about.graduation")}</p>
             </div>
           </li>{" "}
           <li>
@@ -32,19 +39,13 @@ function About() {
             </div>
           </li>
           <li>
-            <b>2015-2019</b>{" "}
+            <b>1995</b>
             <div className="flex items-center">
-              <img src={graduationHat} alt="" />
-              <p>{t("about.graduation")}</p>
+              <img src={babyBoy} alt="" />
+              <p>{t("about.birthPlace")}</p>
+              <img src={syria} alt="" />
             </div>
-          </li>
-          <li>
-            <b>2019-present</b>
-            <div className="flex items-center">
-              <img src={maleTeacher} alt="" />
-              <p>{t("about.profession")}</p>
-            </div>
-          </li>
+          </li>{" "}
         </ul>
       </div>
       <div className="about__image">

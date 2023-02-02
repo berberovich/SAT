@@ -1,0 +1,42 @@
+.form-control {
+  max-width: 260px;
+  padding-bottom: 20px;
+}
+
+.input,
+.textarea {
+  border: 1px solid black;
+  font-size: 1.2rem;
+  padding: 6px 0px 6px 10px;
+  border-radius: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.error {
+  color: red;
+}
+
+.react-tel-input .form-control {
+  padding: 20px;
+  border: 1px solid black !important;
+
+  border-radius: 6px !important;
+}
+
+.react-tel-input .flag-dropdown {
+  border: none !important;
+  border-radius: 6px !important;
+  height: 90% !important;
+  margin-top: 2px !important;
+  margin-left: 2px !important;
+}
+
+.react-tel-input .selected-flag:hover {
+  background-color: lightgray !important;
+}
+
+.react-tel-input .selected-flag {
+  border-radius: 6px !important;
+  background-color: rgb(243, 241, 241) !important;
+}
