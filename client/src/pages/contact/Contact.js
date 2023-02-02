@@ -1,14 +1,16 @@
 import React from "react";
 import ContactForm from "../../components/form/ContactForm";
 import "./Contact.scss";
-import ContactInfos from "../../components/ContactInfos";
+import ContactInfos from "./ContactInfos";
 function Contact() {
   return (
-    <div className="contact">
+    <section className="contact section-width">
       <h3>Let's Get in Touch</h3>
-      <ContactForm />
-      <ContactInfos />
-    </div>
+      <div className="flex justify-between">
+        <ContactForm />
+        <ContactInfos />
+      </div>
+    </section>
   );
 }
 

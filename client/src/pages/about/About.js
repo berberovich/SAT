@@ -12,7 +12,7 @@ import wave from "../../assets/about/wave.png";
 function About() {
   const { t } = useTranslation();
   return (
-    <div className="about flex justify-around">
+    <section className="about flex justify-between section-width">
       <div className="about__content">
         <p>{t("about.paragraphAboutMe")}</p>
         <ul>
@@ -51,7 +51,7 @@ function About() {
       <div className="about__image">
         <img src={myPicture} alt="" />
       </div>
-    </div>
+    </section>
   );
 }
 

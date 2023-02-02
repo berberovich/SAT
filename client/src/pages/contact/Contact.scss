@@ -4,4 +4,20 @@
     margin-bottom: 20px;
     font-weight: lighter;
   }
+
+  .contact-infos {
+    padding-right: 100px;
+
+    li {
+      padding-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
