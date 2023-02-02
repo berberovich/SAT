@@ -28,13 +28,13 @@
 }
 
 .mobile-nav-toggle[aria-expanded="true"] span:nth-child(1) {
-  width: 40px;
   transform: translateY(0px) rotate(-45deg);
   transition-delay: 0.125s;
 }
 
 .mobile-nav-toggle[aria-expanded="true"] span:nth-child(2) {
-  width: 40px;
+  width: 25px;
+
   transform: translateX(-10px) rotate(225deg);
   transition-delay: 0.125s;
 }
@@ -80,20 +80,20 @@ nav {
     position: absolute;
     left: 20px;
     width: 29px;
-    height: 3px;
+    height: 2px;
     background-color: black;
     border-radius: 4px;
     transition: 0.5s;
   }
 
   .mobile-nav-toggle span:nth-child(1) {
-    transform: translateY(-10px);
+    transform: translateY(-7px);
     width: 25px;
     left: 24px;
   }
 
   .mobile-nav-toggle span:nth-child(2) {
-    transform: translateY(10px);
+    transform: translateY(7px);
     width: 15px;
     left: 34px;
   }
