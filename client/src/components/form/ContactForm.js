@@ -4,7 +4,6 @@ import React from "react";
 import * as Yup from "yup";
 import FormikControl from "./FormikControl";
 import "./ContactForm.scss";
-import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
 function ContactForm() {

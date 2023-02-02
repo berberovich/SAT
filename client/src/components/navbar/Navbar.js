@@ -25,6 +25,10 @@ function Navbar() {
 
     i18next.changeLanguage(value);
   };
+  const closeMobileNavbar = () => {
+    setAriaExpanded(false);
+    setDataVisible(false);
+  };
   return (
     <header className="header flex justify-between items-center ">
       <div className="brand-name">
@@ -42,22 +46,34 @@ function Navbar() {
       <nav className="flex items-center">
         <ul className="navbar flex" data-visible={dataVisible}>
           <li className="nav-item">
-            <NavLink to="" className="nav-link">
+            <NavLink to="" className="nav-link" onClick={closeMobileNavbar}>
               {t("navbar.Home")}
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="courses" className="nav-link">
+            <NavLink
+              to="courses"
+              className="nav-link"
+              onClick={closeMobileNavbar}
+            >
               {t("navbar.Courses")}
             </NavLink>
           </li>{" "}
           <li className="nav-item">
-            <NavLink to="about" className="nav-link">
+            <NavLink
+              to="about"
+              className="nav-link"
+              onClick={closeMobileNavbar}
+            >
               {t("navbar.About me")}
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="contact" className="nav-link">
+            <NavLink
+              to="contact"
+              className="nav-link"
+              onClick={closeMobileNavbar}
+            >
               {t("navbar.Contact")}
             </NavLink>
           </li>

@@ -1,5 +1,8 @@
 .header {
-  padding: 20px !important;
+  margin: 20px 0 !important;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .navbar {
@@ -28,14 +31,14 @@
 }
 
 .mobile-nav-toggle[aria-expanded="true"] span:nth-child(1) {
-  transform: translateY(0px) rotate(-45deg);
+  transform: translateY(0px) rotate(45deg);
   transition-delay: 0.125s;
 }
 
 .mobile-nav-toggle[aria-expanded="true"] span:nth-child(2) {
   width: 25px;
 
-  transform: translateX(-10px) rotate(225deg);
+  transform: translateX(-10px) rotate(-45deg);
   transition-delay: 0.125s;
 }
 
