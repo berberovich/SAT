@@ -1,7 +1,7 @@
 import React from "react";
 
 function Courses() {
-  return <div>hiio</div>;
+  return <div></div>;
 }
 
 export default Courses;

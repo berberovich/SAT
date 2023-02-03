@@ -23,45 +23,48 @@ function ContactForm() {
   });
   const onSubmit = (values) => {};
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={onSubmit}
-    >
-      {(formik) => {
-        return (
-          <Form>
-            <FormikControl
-              control={"input"}
-              type="name"
-              label="Name*"
-              name="name"
-            />
-            <FormikControl
-              control={"input"}
-              type="email"
-              label="Email*"
-              name="email"
-            />{" "}
-            <FormikControl
-              control={"input"}
-              type="number"
-              label="Phone Number"
-              placeholder="094113934"
-              name="phoneNumber"
-            />
-            <FormikControl
-              control={"textarea"}
-              label="Message*"
-              name="message"
-            />
-            <Button type="submit" variant="contained">
-              Submit
-            </Button>
-          </Form>
-        );
-      }}
-    </Formik>
+    <div>
+      <h3>Let's Get in Touch</h3>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={onSubmit}
+      >
+        {(formik) => {
+          return (
+            <Form>
+              <FormikControl
+                control={"input"}
+                type="name"
+                label="Name*"
+                name="name"
+              />
+              <FormikControl
+                control={"input"}
+                type="email"
+                label="Email*"
+                name="email"
+              />{" "}
+              <FormikControl
+                control={"input"}
+                type="number"
+                label="Phone Number"
+                placeholder="094113934"
+                name="phoneNumber"
+              />
+              <FormikControl
+                control={"textarea"}
+                label="Message*"
+                name="message"
+              />
+              <Button type="submit" variant="contained">
+                Submit
+              </Button>
+            </Form>
+          );
+        }}
+      </Formik>
+    </div>
   );
 }
 

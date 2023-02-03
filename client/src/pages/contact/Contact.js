@@ -5,8 +5,7 @@ import ContactInfos from "./ContactInfos";
 function Contact() {
   return (
     <section className="contact section-width">
-      <h3>Let's Get in Touch</h3>
-      <div className="flex justify-between">
+      <div className="contact-container flex justify-between">
         <ContactForm />
         <ContactInfos />
       </div>

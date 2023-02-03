@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -14,6 +14,7 @@ function Navbar() {
   const [ariaExpanded, setAriaExpanded] = useState(false);
   const [language, setLanguage] = useState("en");
   const currentLanguage = cookies.get("i18next");
+
   const handleNavBtnClick = (e) => {
     setAriaExpanded(!ariaExpanded);
     setDataVisible(!dataVisible);
@@ -29,6 +30,7 @@ function Navbar() {
     setAriaExpanded(false);
     setDataVisible(false);
   };
+
   return (
     <header className="header flex justify-between items-center ">
       <div className="brand-name">
@@ -77,25 +79,52 @@ function Navbar() {
               {t("navbar.Contact")}
             </NavLink>
           </li>
-        </ul>
-        <div className="languages">
-          <FormControl sx={{ m: 1 }} variant="standard">
-            <Select
-              labelId="demo-customized-select-label"
-              id="demo-customized-select"
-              value={language}
-              defaultValue={language}
-              onChange={handleLanguageChange}
-            >
-              <MenuItem value={"en"} disabled={currentLanguage === "en"}>
+          {document.body.clientWidth < 768 && (
+            <li className="language-selection-in-mobile-nav">
+              <span
+                onClick={() => {
+                  handleLanguageChange({ target: { value: "en" } });
+                }}
+                className={`language-in-mobile-nav ${
+                  currentLanguage === "en" && "active-lang"
+                }`}
+              >
                 en
-              </MenuItem>
-              <MenuItem value={"am"} disabled={currentLanguage === "am"}>
-                հայ
-              </MenuItem>
-            </Select>
-          </FormControl>
-        </div>
+              </span>{" "}
+              /{" "}
+              <span
+                onClick={() => {
+                  handleLanguageChange({ target: { value: "am" } });
+                }}
+                className={`language-in-mobile-nav ${
+                  currentLanguage === "am" && "active-lang"
+                }`}
+              >
+                arm
+              </span>
+            </li>
+          )}
+        </ul>
+        {document.body.clientWidth > 768 && (
+          <div className="languages">
+            <FormControl sx={{ m: 1 }} variant="standard">
+              <Select
+                labelId="demo-customized-select-label"
+                id="demo-customized-select"
+                value={language}
+                defaultValue={language}
+                onChange={handleLanguageChange}
+              >
+                <MenuItem value={"en"} disabled={currentLanguage === "en"}>
+                  en
+                </MenuItem>
+                <MenuItem value={"am"} disabled={currentLanguage === "am"}>
+                  հայ
+                </MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+        )}
       </nav>
     </header>
   );
