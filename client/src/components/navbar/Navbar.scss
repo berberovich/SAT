@@ -1,6 +1,8 @@
 .header {
   margin: 20px 0 !important;
   position: sticky;
+  background-color: white;
+  z-index: 9999;
   top: 0;
 }
 
@@ -13,7 +15,7 @@
   transition: 0.4s;
 }
 
-.language-in-mobile-nav {
+.langu ge-in-mobile-nav {
   transition: 0.4s;
   color: rgb(182, 174, 174);
 

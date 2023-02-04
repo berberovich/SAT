@@ -5,8 +5,10 @@ import * as Yup from "yup";
 import FormikControl from "./FormikControl";
 import "./ContactForm.scss";
 import "react-phone-input-2/lib/style.css";
+import { useTranslation } from "react-i18next";
 
 function ContactForm() {
+  const { t } = useTranslation();
   const initialValues = {
     name: "",
     email: "",
@@ -21,10 +23,12 @@ function ContactForm() {
 
     message: Yup.string().required("Required"),
   });
-  const onSubmit = (values) => {};
+  const onSubmit = (values) => {
+    console.log(values);
+  };
   return (
     <div>
-      <h3>Let's Get in Touch</h3>
+      <h3>{t("contact.letsgetintouch")}</h3>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
