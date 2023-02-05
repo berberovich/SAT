@@ -27,7 +27,7 @@ function ContactForm() {
     console.log(values);
   };
   return (
-    <div>
+    <div className="contact-form">
       <h3>{t("contact.letsgetintouch")}</h3>
       <Formik
         initialValues={initialValues}

@@ -1,5 +1,4 @@
 .form-control {
-  max-width: 260px;
   padding-bottom: 20px;
 }
 
@@ -20,7 +19,7 @@
 .react-tel-input .form-control {
   padding: 20px;
   border: 1px solid black !important;
-
+  max-width: 257px;
   border-radius: 6px !important;
 }
 
@@ -39,4 +38,8 @@
 .react-tel-input .selected-flag {
   border-radius: 6px !important;
   background-color: rgb(243, 241, 241) !important;
+}
+
+.contact-form {
+  padding: 0 30px 30px 30px;
 }

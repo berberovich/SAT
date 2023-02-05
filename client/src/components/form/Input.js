@@ -29,13 +29,15 @@ function Input(props) {
   return (
     <div className="form-control">
       <label htmlFor={name}>{label}</label>
-      <Field
-        type={type}
-        id={name}
-        name={name}
-        className="input"
-        {...otherProps}
-      />
+      <div>
+        <Field
+          type={type}
+          id={name}
+          name={name}
+          className="input"
+          {...otherProps}
+        />
+      </div>
 
       <ErrorMessage name={name} component={TextError} />
     </div>
