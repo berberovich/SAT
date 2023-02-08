@@ -3,7 +3,6 @@
   position: sticky;
   z-index: 9999;
   top: 0;
-  background-color: white;
 }
 
 .navbar {
@@ -103,8 +102,8 @@ nav {
   .mobile-nav-toggle {
     display: block;
     position: fixed;
-    right: 3px;
-    top: -8px;
+    right: 8px;
+    top: 0px;
     width: 60px;
     aspect-ratio: 1;
     overflow: hidden;

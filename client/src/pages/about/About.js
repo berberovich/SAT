@@ -6,8 +6,6 @@ import babyBoy from "../../assets/about/baby.png";
 import syria from "../../assets/about/syria.png";
 import armenia from "../../assets/about/armenia.png";
 import graduationHat from "../../assets/about/graduation-hat.png";
-import maleTeacher from "../../assets/about/male-teacher.png";
-import wave from "../../assets/about/wave.png";
 
 function About() {
   const { t } = useTranslation();
@@ -20,7 +18,6 @@ function About() {
           <li>
             <b>2019-present</b>
             <div className="flex items-center">
-              <img src={maleTeacher} alt="" />
               <p>{t("about.profession")}</p>
             </div>
           </li>{" "}
@@ -49,6 +46,7 @@ function About() {
         </ul>
       </div>
       <div className="about__image">
+        {" "}
         <img src={myPicture} alt="" />
       </div>
     </section>

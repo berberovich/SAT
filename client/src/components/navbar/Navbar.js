@@ -7,6 +7,7 @@ import i18next from "i18next";
 import "./Navbar.scss";
 import { useTranslation } from "react-i18next";
 import cookies from "js-cookie";
+import useClickOutside from "../../hooks/useClickOutside";
 
 function Navbar() {
   const { t } = useTranslation();
@@ -14,6 +15,10 @@ function Navbar() {
   const [ariaExpanded, setAriaExpanded] = useState(false);
   const [language, setLanguage] = useState("en");
   const currentLanguage = cookies.get("i18next");
+  const ref = useClickOutside(() => {
+    setDataVisible(false);
+    setAriaExpanded(false);
+  });
 
   const handleNavBtnClick = (e) => {
     setAriaExpanded(!ariaExpanded);
@@ -45,7 +50,7 @@ function Navbar() {
         <span></span>
         <span></span>
       </button>
-      <nav className="flex items-center">
+      <nav className="flex items-center" ref={ref}>
         <ul className="navbar flex" data-visible={dataVisible}>
           <li className="nav-item">
             <NavLink to="" className="nav-link" onClick={closeMobileNavbar}>

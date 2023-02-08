@@ -14,10 +14,10 @@ function Input(props) {
         <Field name={name} className="input" type={type}>
           {(props) => {
             const { field, form, meta } = props;
-            console.log(field);
+            console.log(form);
             return (
               <>
-                <PhoneInput country={"am"} />
+                <PhoneInput country={"am"} value={form.values.phoneNumber} />
                 <ErrorMessage name={name} component={TextError} />
               </>
             );

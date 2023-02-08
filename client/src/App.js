@@ -1,5 +1,4 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { Route, Routes } from "react-router-dom";
 import ErrorPage from "./pages/errorpage/ErrorPage";
 import Navbar from "./components/navbar/Navbar";
@@ -8,10 +7,8 @@ import Contact from "./pages/contact/Contact";
 import FAQ from "./pages/FAQ";
 import Home from "./pages/Home";
 import Courses from "./pages/courses/Courses";
-import MainDialog from "./components/dialog/MainDialog";
+import Footer from "./pages/footer/Footer";
 function App() {
-  const { t } = useTranslation();
-
   return (
     <>
       <Navbar />
@@ -24,6 +21,7 @@ function App() {
         <Route path="faq" element={<FAQ />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }

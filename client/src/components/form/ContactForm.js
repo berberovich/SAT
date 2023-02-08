@@ -6,9 +6,12 @@ import FormikControl from "./FormikControl";
 import "./ContactForm.scss";
 import "react-phone-input-2/lib/style.css";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
 
 function ContactForm() {
   const { t } = useTranslation();
+  const dispatch = useDispatch(); //for snackbar
+
   const initialValues = {
     name: "",
     email: "",
@@ -23,9 +26,8 @@ function ContactForm() {
 
     message: Yup.string().required("Required"),
   });
-  const onSubmit = (values) => {
-    console.log(values);
-  };
+
+  const onSubmit = (values) => {};
   return (
     <div className="contact-form">
       <h3>{t("contact.letsgetintouch")}</h3>
@@ -53,7 +55,6 @@ function ContactForm() {
                 control={"input"}
                 type="number"
                 label="Phone Number"
-                placeholder="094113934"
                 name="phoneNumber"
               />
               <FormikControl

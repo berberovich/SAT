@@ -4,6 +4,9 @@ import {
   closeDialog,
   selectDialog,
 } from "../../redux/features/dialog/dialogSlice";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+import "./MainDialog.scss";
 
 function MainDialog() {
   const { open, title, content } = useSelector(selectDialog);
@@ -12,8 +15,22 @@ function MainDialog() {
     dispatch(closeDialog());
   };
   return (
-    <Dialog open={open} onClose={handleClose}>
-      <DialogTitle>{title}</DialogTitle>
+    <Dialog open={open} onClose={handleClose} className="dialog-container">
+      <DialogTitle>
+        {" "}
+        {title}{" "}
+        <IconButton
+          aria-label="close"
+          onClick={handleClose}
+          sx={{
+            position: "absolute",
+            right: 8,
+            top: 8,
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
       <DialogContent>{content}</DialogContent>
     </Dialog>
   );

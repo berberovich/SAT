@@ -10,9 +10,11 @@ function FormikControl({ control, ...rest }) {
     case "textarea": {
       return <TextArea {...rest} />;
     }
+
+    default: {
+      return;
+    }
   }
 }
-
-
 
 export default FormikControl;
