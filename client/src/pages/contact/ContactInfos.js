@@ -1,6 +1,7 @@
 import React from "react";
 import telephone from "../../assets/contact/telephone.png";
 import location from "../../assets/contact/location (1).png";
+import location2 from "../../assets/contact/352521_location_on_icon (1).svg";
 import email from "../../assets/contact/email (1).png";
 import facebook from "../../assets/contact/facebook.png";
 import instagram from "../../assets/contact/instagram.png";
@@ -23,7 +24,7 @@ function ContactInfos() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={location} alt="" />
+            <img src={location2} alt="" />
           </a>
           <p>{t("contact.address")}</p>
         </li>
