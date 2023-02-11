@@ -12,7 +12,7 @@ function MainSnackbar() {
   const handleClose = () => dispatch(closeSnackbar());
   return (
     <Snackbar
-      anchorOrigin={{ vertical: "buttom", horizontal: "right" }}
+      anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
       open={open}
       autoHideDuration={4000}
       maxSnack={3}

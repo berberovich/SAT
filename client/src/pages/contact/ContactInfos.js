@@ -6,8 +6,10 @@ import facebook from "../../assets/contact/facebook.png";
 import instagram from "../../assets/contact/instagram.png";
 import whatsapp from "../../assets/contact/whatsapp.png";
 import linkedin from "../../assets/contact/linkedin.png";
+import { useTranslation } from "react-i18next";
 
 function ContactInfos() {
+  const { t } = useTranslation();
   return (
     <div className="contact-infos">
       <p>
@@ -23,7 +25,7 @@ function ContactInfos() {
           >
             <img src={location} alt="" />
           </a>
-          <p>Pavstos Buzand 13, apt. 100</p>
+          <p>{t("contact.address")}</p>
         </li>
         <li>
           <a href="tel:+37494113934" rel="noreferrer" target="_blank">

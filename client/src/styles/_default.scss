@@ -33,6 +33,52 @@ ul li {
   list-style: none;
 }
 
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.dark {
+  * {
+    background-color: rgb(41, 41, 41);
+    color: #e2e2e2;
+  }
+
+  a:hover {
+    color: white;
+  }
+
+  .error {
+    color: rgb(212, 35, 35);
+  }
+
+  .btn {
+    border: 1px solid #315841;
+
+    color: black;
+    background-color: #315841;
+  }
+
+  .languages {
+    div,
+    option {
+      color: white;
+    }
+  }
+
+  .mobile-nav-toggle {
+    span {
+      background-color: white;
+    }
+  }
+
+  .contact-form {
+    input,
+    textarea {
+      border: 1px solid white;
+    }
+  }
+}
+
 #root {
   min-height: 100vh;
   background-color: $background-color;

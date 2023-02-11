@@ -9,16 +9,19 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import MainDialog from "./components/dialog/MainDialog";
 import MainSnackbar from "./components/snackbar/MainSnackbar";
+import ThemeProvider from "./contexts/ThemeContext";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
   <Suspense fallback={<CircularProgress />}>
     <Provider store={store}>
-      <MainDialog />
-      <MainSnackbar />
-      <Router>
-        <App />
-      </Router>
+      <ThemeProvider>
+        <MainDialog />
+        <MainSnackbar />
+        <Router>
+          <App />
+        </Router>
+      </ThemeProvider>
     </Provider>
   </Suspense>
 );

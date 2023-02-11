@@ -13,6 +13,29 @@
         "profession": "SAT math Tutor"
     },
     "contact": {
-        "letsgetintouch": "Let's Get in Touch"
+        "letsgetintouch": "Let's Get in Touch",
+        "address": "Pavstos Buzand 13, apt. 100",
+        "name": "Name*",
+        "email": "Email*",
+        "phoneNumber": "Phone Number",
+        "message": "Message*",
+        "submit": "Submit", 
+        "required": "Required",
+        "invalidEmail": "Invalid Email"
+    },
+    "courses": {
+        "learnMore": "learn more",
+        "duration": "Duration",
+        "level": "Level",
+        "commitment": "Commitment",
+        "format": "Course Format",
+        "price": "Price",
+        "beginner": "Beginner",
+        "advanced": "Advanced",
+        "month": "months",
+        "week": "week",
+        "group": "Group",
+        "private": "Private",
+        "hour": "hour"
     }
 }

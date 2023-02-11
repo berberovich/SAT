@@ -7,6 +7,7 @@ import "./ContactForm.scss";
 import "react-phone-input-2/lib/style.css";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
+import { openSnackbar } from "../../redux/features/snackbar/snackbarSlice";
 
 function ContactForm() {
   const { t } = useTranslation();
@@ -20,14 +21,24 @@ function ContactForm() {
   };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("Required"),
-    email: Yup.string().email("Invalid Email").required("Required"),
-    phoneNumber: Yup.number().required("Required"),
+    name: Yup.string().required(t("contact.required")),
+    email: Yup.string()
+      .email(t("contact.invalidEmail"))
+      .required(t("contact.required")),
+    phoneNumber: Yup.number(),
 
-    message: Yup.string().required("Required"),
+    message: Yup.string().required(t("contact.required")),
   });
 
-  const onSubmit = (values) => {};
+  const onSubmit = (values, onSubmitProps) => {
+    onSubmitProps.resetForm();
+    dispatch(
+      openSnackbar({
+        message: "successfully submitted",
+        severity: "success",
+      })
+    );
+  };
   return (
     <div className="contact-form">
       <h3>{t("contact.letsgetintouch")}</h3>
@@ -42,29 +53,30 @@ function ContactForm() {
               <FormikControl
                 control={"input"}
                 type="name"
-                label="Name*"
+                label={t("contact.name")}
                 name="name"
               />
               <FormikControl
                 control={"input"}
                 type="email"
-                label="Email*"
+                label={t("contact.email")}
                 name="email"
               />{" "}
               <FormikControl
                 control={"input"}
                 type="number"
-                label="Phone Number"
+                label={t("contact.phoneNumber")}
                 name="phoneNumber"
+                placeholder="+374XXXXXXXX"
               />
               <FormikControl
                 control={"textarea"}
-                label="Message*"
+                label={t("contact.message")}
                 name="message"
               />
-              <Button type="submit" variant="contained">
-                Submit
-              </Button>
+              <button type="submit" variant="contained" className="btn">
+                {t("contact.submit")}
+              </button>
             </Form>
           );
         }}

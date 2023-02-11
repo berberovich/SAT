@@ -13,6 +13,29 @@
         "profession": "SAT մաթեմատիկայի դասախոս"   
     },
     "contact": {
-        "letsgetintouch": "Եկեք կապ հաստատենք:"
+        "letsgetintouch": "Հետադարձ Կապ",
+        "address": "Փավստոս Բուզանդ 13, բնակարան 100",
+        "name": "Անուն*",
+        "email": "Էլ․ հասցե*",
+        "phoneNumber": "Հեռախոսահամար",
+        "message": "Հաղորդագրություն*",
+        "submit": "Ուղարկել",
+        "required": "Պարտադիր է",
+        "invalidEmail": "Էլ․ հասցեն վավեր չէ"
+    },
+    "courses": {
+        "learnMore": "իմանալ ավելին",
+        "duration": "Տևողություն",
+        "level": "Մակարդակ",
+        "commitment": "Դասաժամեր",
+        "price": "Գին",
+        "format": "Տեսակ",
+        "beginner": "Սկսնակ",
+        "advanced": "մասնագիտացված",
+        "month": "ամիս",
+        "week": "շաբաթ",
+        "group": "Խմբակային",
+        "private": "Անհատական",
+        "hour": "ժամ"
     }
 }

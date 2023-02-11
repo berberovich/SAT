@@ -21,6 +21,29 @@
   cursor: pointer;
 }
 
+.theme-toggle {
+  border: 2px solid rgba(0, 0, 0, 0.356);
+  padding: 8px;
+  background: none;
+  cursor: pointer;
+}
+
+.theme-toggle svg {
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+}
+
+.dark .theme-toggle svg {
+  fill: white;
+}
+.dark .theme-toggle {
+  background-color: rgb(15, 15, 15);
+}
+.light .theme-toggle {
+  background-color: rgb(219, 214, 214);
+  
+}
 .language-selection-in-mobile-nav {
   position: absolute;
   bottom: 10px;
