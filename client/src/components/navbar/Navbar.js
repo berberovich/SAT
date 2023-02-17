@@ -129,6 +129,11 @@ function Navbar() {
               arm
             </span>
           </li>
+          <li className="theme-toggle-in-mobile-nav">
+            <div className="theme-toggle-box-in-mobile-nav">
+              {ThemeToggle()}
+            </div>
+          </li>
         </ul>
         <div className="languages">
           <FormControl sx={{ m: 1 }} variant="standard">
@@ -148,7 +153,7 @@ function Navbar() {
             </Select>
           </FormControl>
         </div>
-        <div>{ThemeToggle()}</div>
+        <div className="theme-toggle-box">{ThemeToggle()}</div>
       </nav>
     </header>
   );

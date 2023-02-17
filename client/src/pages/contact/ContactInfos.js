@@ -24,14 +24,25 @@ function ContactInfos() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={location2} alt="" />
+            <svg
+              className="location-svg"
+              height="48"
+              viewBox="0 0 48 48"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="xyz"
+                d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+              />
+              <path d="M0 0h48v48h-48z" fill="none" />
+            </svg>
           </a>
           <p>{t("contact.address")}</p>
         </li>
         <li>
-          <a href="tel:+37494113934" rel="noreferrer" target="_blank">
-            <img src={telephone} alt="" />
-          </a>
+          {" "}
+          <a href="tel:+37494113934" rel="noreferrer" target="_blank"></a>
           <p>+374 94 11 39 34</p>
         </li>
         <li>
