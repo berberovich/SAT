@@ -74,7 +74,11 @@ function ContactForm() {
                 label={t("contact.message")}
                 name="message"
               />
-              <button type="submit" variant="contained" className="btn">
+              <button
+                type="submit"
+                variant="contained"
+                className="btn btn-submit"
+              >
                 {t("contact.submit")}
               </button>
             </Form>

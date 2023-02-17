@@ -52,8 +52,15 @@ input::-webkit-inner-spin-button {
   }
 
   .btn {
-    border: 1px solid #315841;
+    color: black;
+  }
 
+  .btn:hover {
+    background-color: rgb(136, 132, 132);
+  }
+
+  .btn-submit {
+    border: 1px solid #315841;
     color: black;
     background-color: #315841;
   }
@@ -82,9 +89,6 @@ input::-webkit-inner-spin-button {
 #root {
   min-height: 100vh;
   background-color: $background-color;
-}
-
-#root {
   max-width: $container-width + px;
   margin: 0 auto;
   padding: $container-padding;

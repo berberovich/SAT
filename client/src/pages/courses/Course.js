@@ -42,9 +42,9 @@ function Course({ courseDetails }) {
           <span>{t("courses.price")}: </span> <span> {price}</span>
         </li>{" "}
         <div className="btn-container">
-          <Button variant="outlined" onClick={handleClick}>
+          <button className="btn" onClick={handleClick}>
             {t("courses.learnMore")}
-          </Button>
+          </button>
         </div>
       </ul>
     </>
