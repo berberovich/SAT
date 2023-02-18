@@ -22,6 +22,7 @@ function MainDialog() {
         <IconButton
           aria-label="close"
           onClick={handleClose}
+          className="dialog-btn-close"
           sx={{
             position: "absolute",
             right: 8,
